@@ -6,6 +6,20 @@ var List = function() {
 
   function findLargest(list) {
 
+  	if (list.length === 0) {
+  		throw 'List cannot be empty.' ;
+  	}
+
+  	var maxNum = list[0];
+
+  	for (var i = 0, listSize = list.length; i < listSize; i++) {
+  		if (list[i] > maxNum) {
+  			maxNum = list[i];
+  		}
+  	}
+
+  	return maxNum;
+
   }
 
   return {
