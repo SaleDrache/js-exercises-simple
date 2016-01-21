@@ -9,7 +9,7 @@ var List = function() {
   	var newList = [];
   	var longerListSize;
 
-  	(list1.length > list2.length) ? longerListSize = list1.length : longerListSize = list2.length;
+  	longerListSize = (list1.length > list2.length) ? list1.length : list2.length;
 
   	for (var i = 0; i < longerListSize; i++ ) {
   		
