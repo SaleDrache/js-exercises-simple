@@ -8,6 +8,26 @@ var SumProduct = function() {
 
   function calculate(n, opts) {
 
+  	if ( (opts.mode !== "sum") && (opts.mode !== "product") ) {
+  		throw 'Invalid calculation mode.'; 
+  	}
+
+  	if (opts.mode === "sum") {
+  		
+  		for (var i = 1, sum = 0; i <= n; i++) {
+  			sum += i;
+  		}
+  		return sum;
+
+  	} else {
+
+  		for (var i = 1, prod = 1; i <= n; i++) {
+  			prod *= i;
+  		}
+  		return prod;
+
+  	}
+
   }
 
   return {

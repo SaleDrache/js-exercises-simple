@@ -6,6 +6,22 @@ var Sum = function() {
 
   function sumNumbers(n) {
 
+  	if (n < 0) {
+  		n = -n;
+  		var negativeNum = true;
+  	}
+
+  	for (var i = 0, sum = 0; i <= n; i++) {
+  		sum += i;
+  	}
+
+  	if (negativeNum) {
+  		return -sum ;
+  	} else {
+  		return sum ;
+  	}
+
+
   }
 
   return {
